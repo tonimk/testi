@@ -1,10 +1,23 @@
+# Kommentti esimerkin vuoksi tähän
+
+def inputNumber(message):
+  while True:
+    try:
+       userInput = int(input(message))       
+    except ValueError:
+       print("Anna ikä kokonaislukuna, kiitos!")
+       continue
+    else:
+       return userInput 
+       break 
+
 i = 0
 while i < 3:
     nimi = input("Anna nimesi: ")
     print("Sinä olet " + nimi)
-    ikä = int(input("Anna ikäsi: "))
+    ikä = inputNumber("Anna ikäsi: ")
     print("Ikäsi on:",ikä)
-    kaverikä = int(input("Kuinka vanha mielikuvituskaverisi on? "))
+    kaverikä = inputNumber("Kuinka vanha mielikuvituskaverisi on? ")
     if ikä > kaverikä:
         print("Sinä olet vanhempi")
     elif ikä < kaverikä:
@@ -15,4 +28,4 @@ while i < 3:
     if i < 3:
         print("Tämä käydään vielä", 3 - i,"kertaa")
     else:
-        print("Loppu!")
+        print("Tämä\nohjelma\non\nnyt\nloppu")
